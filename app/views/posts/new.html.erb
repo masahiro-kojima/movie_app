@@ -1,0 +1,24 @@
+<!--rails フォームタグ　動画のタイトル、動画の説明、投稿する動画-->
+<%= form_with(model: @post, local: true) do |form| %>
+<!--タイトル-->
+  <div class="form-group">
+    <%= form.text_field :title, placeholder: "タイトル" %>  </div>
+  <div class="form-group">
+    <%= form.text_field :github_url, placeholder: "github_url" %>  </div>
+  <div class="form-group">
+    <%= form.text_field :heroku_url, placeholder: "heroku_url" %>  </div>
+<!--動画説明-->
+  <div class="form-group">
+    <%= form.text_field :title, placeholder: "タイトル" %>  </div>
+<!--動画説明-->
+<!--動画説明-->
+<!--動画説明-->
+  <div class="form-group">
+    <%= form.text_area :body, placeholder: "動画の説明" %>
+  </div>
+<!--ファイル投稿-->
+  <div class="form-group">
+    <%= form.file_field :video , :accept => 'video/*'%>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+<% end %>
