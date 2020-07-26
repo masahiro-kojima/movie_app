@@ -2,7 +2,7 @@
   <% @posts.each do |post| %>
   <li class="media">
     <!--ビデオタグ　モデル　カラム　文字以外を文字にする　-->
-    <%= video_tag post.video.to_s, :size => "360x360" , loop: true, autoplay: true ,muted: true%>
+    <%= video_tag post.video.to_s, :size => "1000x1000" , loop: true, autoplay: true ,muted: true%>
     <div class="media-body">
       <h6 class="mt-0 mb-1">[タイトル]<br></h6>
       <%= post.title %>
@@ -12,6 +12,7 @@
 　　　</div>
       <h6 class="mt-0 mb-1">[heroku_url]<br></h6>
       <%= post.heroku_url %>
+      <h6 class="mt-0 mb-1">[アプリ説明]<br></h6>
       <%= simple_format(post.body) %>
       <%= link_to "編集",  edit_post_path(post) %>
       <%= link_to "削除", post, method: :delete, data: { confirm: "#{post.title}を削除して大丈夫ですか？" } %>
